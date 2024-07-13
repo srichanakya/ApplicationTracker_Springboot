@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Application Tracker Controller
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Spring Boot controller manages endpoints for an application tracking system. It provides functionalities to retrieve, add, update, and delete job applications.
 
-## Available Scripts
+## Endpoints
 
-In the project directory, you can run:
+- **GET /applications/allapplications**
+  - Retrieves all applications stored in the database.
+  
+- **GET /applications/viewapplication/{id}**
+  - Retrieves a specific application by its ID.
+  
+- **POST /applications/addapplications**
+  - Adds a new application to the database.
+  
+- **PUT /applications/updateapplication/{id}**
+  - Updates an existing application identified by its ID.
+  
+- **DELETE /applications/deleteapplication/{id}**
+  - Deletes an application from the database by its ID.
+  
+- **GET /applications/count**
+  - Retrieves the total count of applications stored in the database.
+  
+- **GET /applications/{status}**
+  - Retrieves applications filtered by status (e.g., APPLIED, INTERVIEWED).
+  
+- **GET /applications/find**
+  - Retrieves applications filtered by job title, role, and company.
+  
+- **GET /applications/countByStatus**
+  - Retrieves a count of applications grouped by status.
+  
+- **GET /applications/filterbydate**
+  - Retrieves jobs count grouped by applied date.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Spring Boot**: Framework for creating Java applications quickly.
+- **Java Persistence API (JPA)**: Standard for accessing databases in Java.
+- **RESTful API**: Design pattern for building scalable APIs.
+- **Spring Data JPA**: Simplifies data access using Spring applications with JPA technology.
+- **Cross-Origin Resource Sharing (CORS)**: Mechanism for allowing resources on a web page to be requested from another domain.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+1. Ensure you have Java and Maven installed.
+2. Clone the repository.
+3. Configure your database settings in `application.properties`.
+4. Run the application using `mvn spring-boot:run`.
+5. Use API testing tools like Postman to interact with the endpoints.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dependencies
 
-### `npm run build`
+- Spring Web
+- Spring Data JPA
+- H2 Database (or your preferred database dependency)
+- Other dependencies as required by your specific implementation.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributions are welcome! Fork the repository and submit a pull request with your enhancements.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
